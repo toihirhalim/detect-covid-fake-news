@@ -1,11 +1,12 @@
 import strawberry
+from Scrapping import get_text
 
 
 @strawberry.type
 class Query:
     @strawberry.field
-    def hello(self, name: str = "World") -> str:
-        return f"Hello {name}"
+    def scrapping(self, url: str) -> str:
+        return get_text(url)
 
 
 schema = strawberry.Schema(query=Query)
