@@ -1,6 +1,7 @@
 import strawberry
 from Scrapping import get_text
 from Tokenize import tokenize_by_words, tokenize_by_sentences
+from StopWords import remove_stop_words_and_numerics
 from typing import List
 
 
@@ -11,9 +12,12 @@ class Query:
         return get_text(url)
 
     @strawberry.field
-    def tokenize(self, text: str, words: bool = True ) -> List[str]:
+    def tokenize(self, text: str,language: str = "arabic", words: bool = True , stop_words: bool = True) -> List[str]:
         if words:
-            return tokenize_by_words(text)
+            tokens = tokenize_by_words(text)
+            if stop_words:
+                return remove_stop_words_and_numerics(tokens, language)
+            return tokens
 
         return tokenize_by_sentences(text)
 
