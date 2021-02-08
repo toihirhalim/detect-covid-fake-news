@@ -3,6 +3,7 @@ from Scrapping import get_text
 from Tokenize import tokenize_by_words, tokenize_by_sentences
 from StopWords import remove_stop_words_and_numerics
 from Stemming import stemmer_porter, stemmer_lancaster, isri_lancaster
+from lemmatizing import lemmatize
 from SentimentAnalysis import get_sentiment
 from typing import List
 
@@ -40,6 +41,13 @@ class Query:
         if lancaster :
             return stemmer_lancaster(tokens)
         return stemmer_porter(tokens)
+
+    @strawberry.field
+    def lemmatizing(self, text: str, language: str = "english") -> List[List[str]]:
+        tokens = tokenize_by_words(text)
+        tokens = remove_stop_words_and_numerics(tokens, language)
+
+        return lemmatize(tokens)
 
     @strawberry.field
     def sentiment(self, text: str = "") -> SentimentResultType:
