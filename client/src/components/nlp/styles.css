@@ -14,7 +14,7 @@
     flex: 1;
 }
 
-.tokenization-container, .stemming-container, .lemmatzing-container {
+.tokenization-container, .stemming-container, .lemmatzing-container, .pos-tag-container {
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -36,3 +36,10 @@
     overflow: auto;
 }
 
+.options-btn {
+    background-color: rgb(24, 197, 24);
+    color: white;
+    height: 24px;
+    width: 80px;
+    margin-left: 5px;
+}

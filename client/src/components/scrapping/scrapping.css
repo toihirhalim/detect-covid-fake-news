@@ -14,7 +14,7 @@ form {
     justify-content: center;
     margin: 10px;
 }
-button {
+#scrapp-btn {
     background-color: rgb(24, 197, 24);
     color: white;
     height: 24px;

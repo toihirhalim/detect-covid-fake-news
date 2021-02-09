@@ -23,7 +23,7 @@ export default function Stemming({ textInput, setOutput, setArray }) {
     }
     return (
         <div className="stemming-container">
-            <button onClick={stem}>Stem</button>
+            <button className="options-btn" onClick={stem}>Stem</button>
             <select onChange={e => { setLanguage(e.target.value); }}>
                 <option value="arabic" selected>Arabic</option>
                 <option value="english">English</option>

@@ -24,7 +24,7 @@ export default function Tokenize({ textInput, setOutput, setArray }) {
 
     return (
         <div className="tokenization-container">
-            <button onClick={tokenize}>Tokenize</button>
+            <button className="options-btn" onClick={tokenize}>Tokenize</button>
             <select onChange={e => { setLanguage(e.target.value); }}>
                 <option value="arabic" selected>Arabic</option>
                 <option value="english">English</option>

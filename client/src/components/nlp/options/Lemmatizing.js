@@ -22,7 +22,7 @@ export default function Lemmatizing({ textInput, setOutput, setArray }) {
 
     return (
         <div className="lemmatzing-container">
-            <button onClick={lemmatize}>Stem</button>
+            <button className="options-btn" onClick={lemmatize}>lemmatize</button>
         </div>
     )
 }

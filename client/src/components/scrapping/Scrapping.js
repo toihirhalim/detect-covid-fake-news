@@ -29,7 +29,7 @@ export default function Scrapping() {
                     <label> <p>enter url :</p>
                         <input id="input-url" type="url" value={url} placeholder="https://lakome2.com/reportage/208501/" onChange={e => setUrl(e.target.value)} required />
                     </label>
-                    <button>scrapp</button>
+                    <button id="scrapp-btn">scrapp</button>
                 </div>
             </form>
             <Texte text={text} />
