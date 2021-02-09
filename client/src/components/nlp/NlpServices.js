@@ -6,7 +6,7 @@ import './styles.css'
 export default function NlpServices() {
     const [textInput, setTextInput] = useState("")
     const [output, setOutput] = useState()
-    const [array, setArray] = useState(true)
+    const [array, setArray] = useState(false)
 
 
     return (

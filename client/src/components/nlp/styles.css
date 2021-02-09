@@ -14,13 +14,13 @@
     flex: 1;
 }
 
-.tokenization-container {
+.tokenization-container, .stemming-container {
     display: flex;
     justify-content: space-between;
     margin: 10px;
 }
 
-.tokenize-radio-btn {
+.radio-btn {
     margin-left: 5px;
     margin-right: 5px;
 }

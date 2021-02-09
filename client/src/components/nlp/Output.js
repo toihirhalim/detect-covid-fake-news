@@ -12,11 +12,24 @@ export default function Output({ output, array }) {
                             {
                                 output.map(item => {
                                     return (
-                                        <p className="result-field-item">{item},</p>
+                                        <p className="result-field-item">'{item}',</p>
                                     )
                                 })
                             }
                             <p>{']'}</p>
+                        </div>
+                    }
+                    {!array &&
+                        <div>
+                            <p>{'{'}</p>
+                               {
+                                    output.map(item => {
+                                        return (
+                                            <p className="result-field-item">'{item[0]}' : '{item[1]}'</p>
+                                        )
+                                    })
+                               }
+                            <p>{'}'}</p>
                         </div>
                     }
                 </div>

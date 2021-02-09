@@ -13,6 +13,7 @@ export default function Tokenize({ textInput, setOutput, setArray }) {
                 tokenize(text: "${textInput}",language: "${language}" words: ${tokenizeByWords})
             }
         `
+        setOutput(null)
         const data = await graphQlApi(query)
 
         if (data && data.tokenize) {
@@ -31,10 +32,10 @@ export default function Tokenize({ textInput, setOutput, setArray }) {
             <div>
                 <label>
                     words
-                    <input className="tokenize-radio-btn" type="radio" value="true" name="method" checked={tokenizeByWords} onChange={e => setTokenizeByWords(e.target.value === 'true')} />
+                    <input className="radio-btn" type="radio" value="true" name="method" checked={tokenizeByWords} onChange={e => setTokenizeByWords(e.target.value === 'true')} />
                 </label>
                 <label>
-                    <input className="tokenize-radio-btn" type="radio" value="false" name="method" checked={!tokenizeByWords} onChange={e => setTokenizeByWords(e.target.value === 'true')} />
+                    <input className="radio-btn" type="radio" value="false" name="method" checked={!tokenizeByWords} onChange={e => setTokenizeByWords(e.target.value === 'true')} />
                     sentences
                 </label>
 
