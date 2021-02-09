@@ -1,0 +1,38 @@
+
+.services-container {
+    width: 80%;
+    margin: auto;
+    border-radius: 2%/5%;
+    background-color: rgb(222, 226, 230);
+}
+
+.services {
+    display: flex;
+}
+
+.service-input, .service-options, .service-output {
+    flex: 1;
+}
+
+.tokenization-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.tokenize-radio-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.result-field-item{
+    margin-left: 20px;
+}
+.service-output-container{
+    background-color: white;
+    border: 1px solid black;
+    width: 90%;
+    margin: 20px auto;
+    height: 300px;
+    overflow: auto;
+}
+

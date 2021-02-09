@@ -1,4 +1,5 @@
 import Scrapping from './components/scrapping/Scrapping'
+import NlpServices from './components/nlp/NlpServices'
 import './App.css';
 
 function App() {
@@ -6,6 +7,9 @@ function App() {
     <div className="App">
       <div className="scrapping">
         <Scrapping />
+      </div>
+      <div className="nlp">
+        <NlpServices />
       </div>
 
     </div>
