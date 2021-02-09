@@ -8,7 +8,7 @@ export default function Scrapping() {
     const [text, setText] = useState("");
 
     const scrapp = async e => {
-        e.preventDefault();
+        e.preventDefault()
         setText("")
         let query = `
             query {
@@ -24,9 +24,10 @@ export default function Scrapping() {
     return (
         <div className="scrapping-container">
             <h2>Scrapping</h2>
-            <form on onSubmit={scrapp}>
+            <form onSubmit={scrapp}>
                 <div>
-                    <label> <p>enter url :</p>
+                    <label>
+                        <p>enter url :</p>
                         <input id="input-url" type="url" value={url} placeholder="https://lakome2.com/reportage/208501/" onChange={e => setUrl(e.target.value)} required />
                     </label>
                     <button id="scrapp-btn">scrapp</button>
