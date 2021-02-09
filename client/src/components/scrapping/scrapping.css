@@ -1,12 +1,13 @@
 h2 {
     text-align: center;
+    padding: 10px;
   }
   
-
 .scrapping-container {
     width: 80%;
     margin: auto;
-    border-radius: 3%/5%;
+    border-radius: 2%/4%;
+    padding: 10px;
     background-color: rgb(222, 226, 230);
 }
 form {
@@ -18,8 +19,11 @@ form {
     background-color: rgb(24, 197, 24);
     color: white;
     height: 24px;
-    width: 60px;
+    width: 80px;
     margin-left: 5px;
+}
+#scrapp-btn:hover {
+    background-color: rgb(24, 173, 24);
 }
 
 #input-url {
@@ -32,7 +36,7 @@ form {
     border: 1px solid black;
     width: 90%;
     margin: 20px auto;
-    height: 500px;
+    height: 400px;
     overflow: auto;
 }
 

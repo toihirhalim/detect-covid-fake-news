@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import graphQlApi from '../../api/graphQL'
-import '../styles.css'
+import '../nlp.css'
 
 
 export default function Tokenize({ textInput, setOutput, setArray }) {
@@ -26,7 +26,7 @@ export default function Tokenize({ textInput, setOutput, setArray }) {
         <div className="tokenization-container">
             <button className="options-btn" onClick={tokenize}>Tokenize</button>
             <select onChange={e => { setLanguage(e.target.value); }}>
-                <option value="arabic" selected>Arabic</option>
+                <option value="arabic">Arabic</option>
                 <option value="english">English</option>
             </select>
             <div>

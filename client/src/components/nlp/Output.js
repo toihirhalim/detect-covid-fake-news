@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.css'
+import './nlp.css'
 
 export default function Output({ output, array }) {
     return (
@@ -10,9 +10,9 @@ export default function Output({ output, array }) {
                         <div>
                             <p>{'['}</p>
                             {
-                                output.map(item => {
+                                output.map((item, index )=> {
                                     return (
-                                        <p className="result-field-item">'{item}',</p>
+                                        <p key={index} className="result-field-item">'{item}',</p>
                                     )
                                 })
                             }
@@ -23,9 +23,9 @@ export default function Output({ output, array }) {
                         <div>
                             <p>{'{'}</p>
                                {
-                                    output.map(item => {
+                                    output.map((item, index ) => {
                                         return (
-                                            <p className="result-field-item">'{item[0]}' : '{item[1]}'</p>
+                                            <p key={index} className="result-field-item">'{item[0]}' : '{item[1]}'</p>
                                         )
                                     })
                                }

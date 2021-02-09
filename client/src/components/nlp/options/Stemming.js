@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import graphQlApi from '../../api/graphQL'
-import '../styles.css'
+import '../nlp.css'
 
 export default function Stemming({ textInput, setOutput, setArray }) {
     const [language, setLanguage] = useState('arabic')
@@ -25,7 +25,7 @@ export default function Stemming({ textInput, setOutput, setArray }) {
         <div className="stemming-container">
             <button className="options-btn" onClick={stem}>Stem</button>
             <select onChange={e => { setLanguage(e.target.value); }}>
-                <option value="arabic" selected>Arabic</option>
+                <option value="arabic">Arabic</option>
                 <option value="english">English</option>
             </select>
             <div>

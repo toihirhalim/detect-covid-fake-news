@@ -1,6 +1,6 @@
 import React from 'react'
 import graphQlApi from '../../api/graphQL'
-import '../styles.css'
+import '../nlp.css'
 
 export default function Lemmatizing({ textInput, setOutput, setArray }) {
 
