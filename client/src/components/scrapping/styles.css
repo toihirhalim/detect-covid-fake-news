@@ -1,0 +1,36 @@
+h2 {
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    border-radius: 3%/5%;
+    background-color: rgb(222, 226, 230);
+}
+form {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+button {
+    background-color: rgb(24, 197, 24);
+    color: white;
+    height: 24px;
+    width: 60px;
+    margin-left: 5px;
+}
+
+input {
+    height: 20px;
+    width: 600px;
+}
+
+.texte-container {
+    background-color: white;
+    border: 1px solid black;
+    width: 90%;
+    margin: 20px auto;
+    height: 500px;
+    overflow: auto;
+}
