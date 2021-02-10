@@ -1,16 +1,20 @@
 import Scrapping from './components/scrapping/Scrapping'
 import NlpServices from './components/nlp/NlpServices'
 import './App.css';
+import SentimentFakeContainer from './components/otherservices/SentimentFakeContainer';
 
 function App() {
   return (
     <div className="App">
-      <div className="scrapping">
+      <section className="scrapping">
         <Scrapping />
-      </div>
-      <div className="nlp">
+      </section>
+      <section className="nlp">
         <NlpServices />
-      </div>
+      </section>
+      <section className="sent-fake">
+        <SentimentFakeContainer />
+      </section>
     </div>
   );
 }
