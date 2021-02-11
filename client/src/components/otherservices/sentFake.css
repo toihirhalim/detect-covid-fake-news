@@ -39,12 +39,11 @@ h3{
     margin-left: 5px;
 }
 
-.sent-result-container{
+.sent-fake-result-container{
     min-width: 230px;
 }
-.sent-result-p {
+.sent-fake-result-p {
     font-size: 18px;
-    margin: 10px;
 }
 
 .sent-result-style {

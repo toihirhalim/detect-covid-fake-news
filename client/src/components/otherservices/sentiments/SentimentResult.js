@@ -29,13 +29,12 @@ export default function SentimentResult({ result }) {
                 result.neu * 100 + 'px',
                 result.compound * 100 + 'px',
             ])
-            //setColors(['rgb(33, 112, 9)', 'red', 'cornsilk', 'blue'])
         }
     }, [result])
 
     return (
-        <div className="sent-result-container">
-            <p className="sent-result-p">
+        <div className="sent-fake-result-container">
+            <p className="sent-fake-result-p">
                 result :
                 <strong style={color}>{value}</strong>
             </p>
