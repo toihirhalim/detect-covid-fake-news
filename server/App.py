@@ -6,6 +6,7 @@ from Stemming import stemmer_porter, stemmer_lancaster, isri_lancaster
 from lemmatizing import lemmatize
 from words_pos_tag import get_list_pos_tag
 from SentimentAnalysis import get_sentiment
+from FakeNews import analyse
 from typing import List
 
 
@@ -63,6 +64,10 @@ class Query:
     def sentiment(self, text: str = "") -> SentimentResultType:
         result = get_sentiment(text)
         return SentimentResultType(neg=result['neg'], neu=result['neu'], pos=result['pos'], compound=result['compound'])
+
+    @strawberry.field
+    def fakeNews(self, text: str = "") -> str:
+        return analyse(text)
 
 
 schema = strawberry.Schema(query=Query)
