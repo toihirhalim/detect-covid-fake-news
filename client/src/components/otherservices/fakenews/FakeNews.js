@@ -41,7 +41,7 @@ export default function FakeNews() {
 
     return (
         <div className="fake-container">
-            <h3>Fake News</h3>
+            <h3>Fake News about COVID </h3>
             <div className="sent-fake-main">
                 <div>
                     <p>enter text here :</p>
