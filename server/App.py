@@ -34,9 +34,10 @@ class Query:
         return tokenize_by_sentences(text)
 
     @strawberry.field
-    def stemming(self, text: str, language: str = "arabic", lancaster: bool = True) -> List[List[str]]:
+    def stemming(self, text: str, language: str = "arabic", lancaster: bool = True, stop_words: bool = True) -> List[List[str]]:
         tokens = tokenize_by_words(text)
-        tokens = remove_stop_words_and_numerics(tokens, language)
+        if stop_words:
+            tokens = remove_stop_words_and_numerics(tokens, language)
         if language == "arabic":
             return isri_lancaster(tokens)
         if lancaster:
@@ -44,16 +45,18 @@ class Query:
         return stemmer_porter(tokens)
 
     @strawberry.field
-    def lemmatizing(self, text: str, language: str = "english") -> List[List[str]]:
+    def lemmatizing(self, text: str, language: str = "english", stop_words: bool = True) -> List[List[str]]:
         tokens = tokenize_by_words(text)
-        tokens = remove_stop_words_and_numerics(tokens, language)
+        if stop_words:
+            tokens = remove_stop_words_and_numerics(tokens, language)
 
         return lemmatize(tokens)
 
     @strawberry.field
-    def pos_tag(self, text: str, language: str = "english") -> List[List[str]]:
+    def pos_tag(self, text: str, language: str = "english", stop_words: bool = True) -> List[List[str]]:
         tokens = tokenize_by_words(text)
-
+        if stop_words:
+            tokens = remove_stop_words_and_numerics(tokens, language)
         return get_list_pos_tag(tokens)
 
     @strawberry.field
