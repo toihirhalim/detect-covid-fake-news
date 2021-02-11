@@ -21,6 +21,8 @@ $ pip install uvicorn
 $ pip install beautifulsoup4  
 $ pip install requests  
 $ pip install nltk
+$ pip install pandas  
+$ pip install sklearn  
 ```
 
 in the web client  
