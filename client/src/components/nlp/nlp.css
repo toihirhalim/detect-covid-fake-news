@@ -13,16 +13,20 @@
     align-items: center;
 }
 .options-container{
-    min-width: 350px;
+    min-width: 270px;
 }
 .services {
     display: flex;
 }
 
-.tokenization-container, .stemming-container, .lemmatzing-container, .pos-tag-container {
+.tokenization-container, .stemming-container, .lemmatzing-container, .pos-tag-container, .language-opt-container {
     display: flex;
     justify-content: space-between;
     margin: 10px;
+}
+
+.stop-wrd-chkbx {
+    margin-right: 10px;
 }
 
 .radio-btn {
@@ -46,5 +50,9 @@
     color: white;
     height: 24px;
     width: 80px;
+    margin-left: 5px;
+}
+
+.select-language {
     margin-left: 5px;
 }

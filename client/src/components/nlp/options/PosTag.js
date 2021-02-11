@@ -2,12 +2,12 @@ import React from 'react'
 import graphQlApi from '../../api/graphQL'
 import '../nlp.css'
 
-export default function PosTag({ textInput, setOutput, setArray }) {
+export default function PosTag({ textInput, setOutput, setArray, language, includeStopWords }) {
 
     const getPosTags = async e => {
         let query = `
             query {
-                posTag(text: "${textInput}")
+                posTag(text: "${textInput}",language: "${language}", stopWords: ${includeStopWords})
             }
         `
 

@@ -2,14 +2,13 @@ import React, { useState } from 'react'
 import graphQlApi from '../../api/graphQL'
 import '../nlp.css'
 
-export default function Stemming({ textInput, setOutput, setArray }) {
-    const [language, setLanguage] = useState('arabic')
+export default function Stemming({ textInput, setOutput, setArray, language, includeStopWords }) {
     const [lancaster, setLancaster] = useState(true)
 
     const stem = async e => {
         let query = `
             query {
-                stemming(text: "${textInput}", language: "${language}", lancaster: ${lancaster})
+                stemming(text: "${textInput}", language: "${language}", lancaster: ${lancaster}, stopWords: ${includeStopWords})
             }
         `
         setOutput(null)
@@ -24,10 +23,6 @@ export default function Stemming({ textInput, setOutput, setArray }) {
     return (
         <div className="stemming-container">
             <button className="options-btn" onClick={stem}>Stem</button>
-            <select onChange={e => { setLanguage(e.target.value); }}>
-                <option value="arabic">Arabic</option>
-                <option value="english">English</option>
-            </select>
             <div>
                 {language !== 'arabic' &&
                     <div>

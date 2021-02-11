@@ -2,12 +2,12 @@ import React from 'react'
 import graphQlApi from '../../api/graphQL'
 import '../nlp.css'
 
-export default function Lemmatizing({ textInput, setOutput, setArray }) {
+export default function Lemmatizing({ textInput, setOutput, setArray, language, includeStopWords }) {
 
     const lemmatize = async e => {
         let query = `
             query {
-                lemmatizing(text: "${textInput}")
+                lemmatizing(text: "${textInput}", language: "${language}", stopWords: ${includeStopWords})
             }
         `
 

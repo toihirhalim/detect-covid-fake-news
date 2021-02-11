@@ -3,14 +3,15 @@ import graphQlApi from '../../api/graphQL'
 import '../nlp.css'
 
 
-export default function Tokenize({ textInput, setOutput, setArray }) {
-    const [language, setLanguage] = useState('arabic')
+export default function Tokenize({ textInput, setOutput, setArray, language, includeStopWords }) {
+
     const [tokenizeByWords, setTokenizeByWords] = useState(true)
 
     const tokenize = async e => {
+
         let query = `
             query {
-                tokenize(text: "${textInput}",language: "${language}" words: ${tokenizeByWords})
+                tokenize(text: "${textInput}",language: "${language}" words: ${tokenizeByWords}, stopWords: ${includeStopWords})
             }
         `
         setOutput(null)
@@ -25,10 +26,6 @@ export default function Tokenize({ textInput, setOutput, setArray }) {
     return (
         <div className="tokenization-container">
             <button className="options-btn" onClick={tokenize}>Tokenize</button>
-            <select onChange={e => { setLanguage(e.target.value); }}>
-                <option value="arabic">Arabic</option>
-                <option value="english">English</option>
-            </select>
             <div>
                 <label>
                     words

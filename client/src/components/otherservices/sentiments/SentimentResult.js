@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react'
 import '../sentFake.css'
 
 export default function SentimentResult({ result }) {
-
-
+    let colors = ['rgb(33, 112, 9)', 'red', 'cornsilk', 'blue'];
     const [value, setValue] = useState("")
-    const [colors, setColors] = useState(['rgb(33, 112, 9)', 'red', 'cornsilk', 'blue'])
     const [widths, setWidths] = useState(['0 px', '0 px', '0 px', '0 px'])
     const [color, setColor] = useState({ color: colors[0] })
 
 
     useEffect(() => {
+        let colors = ['rgb(33, 112, 9)', 'red', 'cornsilk', 'blue'];
         if (result) {
             if (result.pos > result.neg && result.pos > result.neu) {
                 setColor({ color: colors[0] })
@@ -30,43 +29,46 @@ export default function SentimentResult({ result }) {
                 result.neu * 100 + 'px',
                 result.compound * 100 + 'px',
             ])
-            setColors(['rgb(33, 112, 9)', 'red', 'cornsilk', 'blue'])
+            //setColors(['rgb(33, 112, 9)', 'red', 'cornsilk', 'blue'])
         }
-    }, [result, colors])
+    }, [result])
 
     return (
         <div className="sent-result-container">
-            <p className="sent-result-p">result : <spam className="sent-result-style" style={color}>{value}</spam></p>
+            <p className="sent-result-p">
+                result :
+                <strong style={color}>{value}</strong>
+            </p>
 
             <div>
                 <p>details :</p>
                 <div className="details-container">
                     <div>
                         <div className="sent-result-details">
-                            <div className="circle" style={{ 'background-color': colors[0] }}></div>
-                            <p className='sent-result-detail-p'>pos</p>
+                            <div className="circle" style={{ 'backgroundColor': colors[0] }}></div>
+                            <p className='sent-result-detail-p'>pos : {result && result.pos}</p>
                         </div>
                         <div className="sent-result-details">
-                            <div className="circle" style={{ 'background-color': colors[1] }}></div>
-                            <p className='sent-result-detail-p'>neg</p>
+                            <div className="circle" style={{ 'backgroundColor': colors[1] }}></div>
+                            <p className='sent-result-detail-p'>neg : {result && result.neg}</p>
                         </div>
                         <div className="sent-result-details">
-                            <div className="circle" style={{ 'background-color': colors[2] }}></div>
-                            <p className='sent-result-detail-p'>neu</p>
+                            <div className="circle" style={{ 'backgroundColor': colors[2] }}></div>
+                            <p className='sent-result-detail-p'>neu : {result && result.neu}</p>
                         </div>
                         <div className="sent-result-details">
-                            <div className="circle" style={{ 'background-color': 'blue' }}></div>
-                            <p className='sent-result-detail-p'>compound</p>
+                            <div className="circle" style={{ 'backgroundColor': 'blue' }}></div>
+                            <p className='sent-result-detail-p'>compound : {result && result.compound}</p>
                         </div>
                     </div>
                     <div className="lines">
                         {
                             result &&
                             <div>
-                                <div className="line" style={{ 'background-color': colors[0], 'width': widths[0] }}></div>
-                                <div className="line" style={{ 'background-color': colors[1], 'width': widths[1] }}></div>
-                                <div className="line" style={{ 'background-color': colors[2], 'width': widths[2] }}></div>
-                                <div className="line" style={{ 'background-color': colors[3], 'width': widths[3] }}></div>
+                                <div className="line" style={{ 'backgroundColor': colors[0], 'width': widths[0] }}></div>
+                                <div className="line" style={{ 'backgroundColor': colors[1], 'width': widths[1] }}></div>
+                                <div className="line" style={{ 'backgroundColor': colors[2], 'width': widths[2] }}></div>
+                                <div className="line" style={{ 'backgroundColor': colors[3], 'width': widths[3] }}></div>
                             </div>
                         }
                     </div>
