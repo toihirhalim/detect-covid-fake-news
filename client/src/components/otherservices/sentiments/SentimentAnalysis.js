@@ -8,7 +8,7 @@ export default function SentimentAnalysis() {
     const [result, setresult] = useState()
 
     const analyse = async e => {
-        e.preventDefault()
+
 
         let query = `
             query{

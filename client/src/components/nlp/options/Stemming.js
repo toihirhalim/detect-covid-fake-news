@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import graphQlApi from '../../api/graphQL'
 import '../nlp.css'
 
-export default function Stemming({ textInput, setOutput, setArray, language, includeStopWords }) {
+export default function Stemming({ textInput, setOutput, setArray, language, includeStopWords, setDivColor }) {
     const [lancaster, setLancaster] = useState(true)
 
     const stem = async e => {
@@ -11,6 +11,7 @@ export default function Stemming({ textInput, setOutput, setArray, language, inc
                 stemming(text: "${textInput}", language: "${language}", lancaster: ${lancaster}, stopWords: ${includeStopWords})
             }
         `
+        setDivColor({ stemming: { 'backgroundColor': 'rgb(183, 185, 187)' } })
         setOutput(null)
         const data = await graphQlApi(query)
 

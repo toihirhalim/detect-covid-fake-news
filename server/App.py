@@ -1,5 +1,5 @@
 import strawberry
-from Scrapping import get_text
+from Scraping import get_text
 from Tokenize import tokenize_by_words, tokenize_by_sentences
 from StopWords import remove_stop_words_and_numerics
 from Stemming import stemmer_porter, stemmer_lancaster, isri_lancaster
@@ -21,7 +21,7 @@ class SentimentResultType:
 @strawberry.type
 class Query:
     @strawberry.field
-    def scrapping(self, url: str) -> str:
+    def scraping(self, url: str) -> str:
         return get_text(url)
 
     @strawberry.field

@@ -3,7 +3,7 @@ import graphQlApi from '../../api/graphQL'
 import '../nlp.css'
 
 
-export default function Tokenize({ textInput, setOutput, setArray, language, includeStopWords }) {
+export default function Tokenize({ textInput, setOutput, setArray, language, includeStopWords, setDivColor }) {
 
     const [tokenizeByWords, setTokenizeByWords] = useState(true)
 
@@ -14,6 +14,8 @@ export default function Tokenize({ textInput, setOutput, setArray, language, inc
                 tokenize(text: "${textInput}",language: "${language}" words: ${tokenizeByWords}, stopWords: ${includeStopWords})
             }
         `
+        setDivColor({ tokenize: { 'backgroundColor': 'rgb(183, 185, 187)' } })
+
         setOutput(null)
         const data = await graphQlApi(query)
 

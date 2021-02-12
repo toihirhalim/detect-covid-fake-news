@@ -1,5 +1,5 @@
 import React from 'react'
-import './scrapping.css'
+import './scraping.css'
 
 export default function Texte({ text }) {
     return (

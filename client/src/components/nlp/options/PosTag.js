@@ -2,7 +2,7 @@ import React from 'react'
 import graphQlApi from '../../api/graphQL'
 import '../nlp.css'
 
-export default function PosTag({ textInput, setOutput, setArray, language, includeStopWords }) {
+export default function PosTag({ textInput, setOutput, setArray, language, includeStopWords, setDivColor }) {
 
     const getPosTags = async e => {
         let query = `
@@ -10,7 +10,7 @@ export default function PosTag({ textInput, setOutput, setArray, language, inclu
                 posTag(text: "${textInput}",language: "${language}", stopWords: ${includeStopWords})
             }
         `
-
+        setDivColor({ postag: { 'backgroundColor': 'rgb(183, 185, 187)' } })
         setOutput(null)
         const data = await graphQlApi(query)
 

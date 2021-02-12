@@ -1,4 +1,4 @@
-import Scrapping from './components/scrapping/Scrapping'
+import Scraping from './components/scraping/Scraping'
 import NlpServices from './components/nlp/NlpServices'
 import './App.css';
 import SentimentFakeContainer from './components/otherservices/SentimentFakeContainer';
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <section className="scrapping">
-        <Scrapping />
+        <Scraping />
       </section>
       <section className="nlp">
         <NlpServices />

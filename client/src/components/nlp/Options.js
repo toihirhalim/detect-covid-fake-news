@@ -10,6 +10,8 @@ export default function Options({ textInput, setOutput, setArray }) {
 
     const [language, setLanguage] = useState('arabic')
     const [includeStopWords, setIncludeStopWords] = useState(true)
+    const [divColor, setDivColor] = useState({})
+
 
 
     return (
@@ -26,13 +28,21 @@ export default function Options({ textInput, setOutput, setArray }) {
             </div>
 
             <hr />
-            <Tokenize textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} />
+            <div style={divColor.tokenize}>
+                <Tokenize textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+            </div>
             <hr />
-            <Stemming textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} />
+            <div style={divColor.stemming} >
+                <Stemming textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+            </div>
             <hr />
-            <Lemmatizing textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} />
+            <div style={divColor.lemmatizing}>
+                <Lemmatizing textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+            </div>
             <hr />
-            <PosTag textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} />
+            <div style={divColor.postag}>
+                <PosTag textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+            </div>
             <hr />
         </div>
     )
