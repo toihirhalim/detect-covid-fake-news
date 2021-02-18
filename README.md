@@ -30,3 +30,30 @@ in the web client
 $ cd client
 $ npm install
 ```
+  
+## Use  
+this application has one page with three section :   
+* Scrapping  
+* NLP   
+* Sentiment Analysis & FakeNews Detect (Covid-19)  
+  
+### Scrapping  
+ enter a url and click the scrapp button  
+some exemples :  
+![scraping-img](/images/arabicScraping.png)
+   
+![scraping-img](/images/englishScrapping.png)  
+  
+### NLP 
+you can enter a test arabic or english and use the differents services like : tokenization, stemmin, lemitizing ...  
+ 
+exemples :  
+  
+![scraping-img](/images/arabicSteming.png)  
+  
+![scraping-img](/images/englishSteming.png)  
+  
+### Sentiment analysis & Fakeews Detect about Covid-19  
+you can enter texts and have a result  laki the following :  
+  
+![scraping-img](/images/sentimentAndFakeNews.png) 
