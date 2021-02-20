@@ -22,7 +22,7 @@ export default function Stemming({ textInput, setOutput, setArray, language, inc
 
     }
     return (
-        <div className="stemming-container">
+        <div className="option">
             <button className="options-btn" onClick={stem}>Stem</button>
             <div>
                 {language !== 'arabic' &&

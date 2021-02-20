@@ -26,7 +26,7 @@ export default function Tokenize({ textInput, setOutput, setArray, language, inc
     }
 
     return (
-        <div className="tokenization-container">
+        <div className="option">
             <button className="options-btn" onClick={tokenize}>Tokenize</button>
             <div>
                 <label>

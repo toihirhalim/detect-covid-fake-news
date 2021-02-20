@@ -21,7 +21,7 @@ export default function PosTag({ textInput, setOutput, setArray, language, inclu
     }
 
     return (
-        <div className="pos-tag-container">
+        <div className="option">
             <button className="options-btn" onClick={getPosTags}>pos-tags</button>
         </div>
     )

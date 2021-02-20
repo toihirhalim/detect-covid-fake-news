@@ -3,6 +3,7 @@ from Scraping import get_text
 from Tokenize import tokenize_by_words, tokenize_by_sentences
 from StopWords import remove_stop_words_and_numerics
 from Stemming import stemmer_porter, stemmer_lancaster, isri_lancaster
+from Bag_of_words import get_bag_of_words
 from lemmatizing import lemmatize
 from words_pos_tag import get_list_pos_tag
 from SentimentAnalysis import get_sentiment
@@ -61,12 +62,24 @@ class Query:
         return get_list_pos_tag(tokens)
 
     @strawberry.field
+    def bag_of_words(self, text: str, language: str = "arabic", stop_words: bool = True) -> List[str]:
+        sentences = tokenize_by_sentences(text)
+
+        if stop_words:
+            clean_sentences = []
+            for sentence in sentences:
+                clean_sentences.append(' '.join(remove_stop_words_and_numerics(tokenize_by_words(sentence), language)))
+            sentences = clean_sentences
+
+        return get_bag_of_words(sentences)
+
+    @strawberry.field
     def sentiment(self, text: str = "") -> SentimentResultType:
         result = get_sentiment(text)
         return SentimentResultType(neg=result['neg'], neu=result['neu'], pos=result['pos'], compound=result['compound'])
 
     @strawberry.field
-    def fakeNews(self, text: str = "") -> str:
+    def fake_news(self, text: str = "") -> str:
         return analyse(text)
 
 

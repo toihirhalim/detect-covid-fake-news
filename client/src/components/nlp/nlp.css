@@ -20,7 +20,7 @@
     display: flex;
 }
 
-.tokenization-container, .stemming-container, .lemmatzing-container, .pos-tag-container, .language-opt-container {
+.option {
     display: flex;
     justify-content: space-between;
     padding: 10px;

@@ -21,7 +21,7 @@ export default function Lemmatizing({ textInput, setOutput, setArray, language, 
     }
 
     return (
-        <div className="lemmatzing-container">
+        <div className="option">
             <button className="options-btn" onClick={lemmatize}>lemmatize</button>
         </div>
     )

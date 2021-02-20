@@ -4,6 +4,7 @@ import PosTag from './options/PosTag'
 import Stemming from './options/Stemming'
 import Tokenize from './options/Tokenize'
 import './nlp.css'
+import BagOfWords from './options/BagOfWords'
 
 
 export default function Options({ textInput, setOutput, setArray }) {
@@ -16,7 +17,7 @@ export default function Options({ textInput, setOutput, setArray }) {
 
     return (
         <div className="options-container">
-            <div className="language-opt-container">
+            <div className="option">
                 <select className="select-language" onChange={e => { setLanguage(e.target.value) }}>
                     <option value="arabic">Arabic</option>
                     <option value="english">English</option>
@@ -42,6 +43,10 @@ export default function Options({ textInput, setOutput, setArray }) {
             <hr />
             <div style={divColor.postag}>
                 <PosTag textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+            </div>
+            <hr />
+            <div style={divColor.BagOfWords}>
+                <BagOfWords textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
             </div>
             <hr />
         </div>
