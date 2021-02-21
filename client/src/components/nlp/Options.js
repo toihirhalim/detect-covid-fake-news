@@ -23,30 +23,70 @@ export default function Options({ textInput, setOutput, setArray }) {
                     <option value="english">English</option>
                 </select>
                 <label>
-                    <input className="stop-wrd-chkbx" type="checkbox" defaultChecked={includeStopWords} onChange={e => { setIncludeStopWords(!includeStopWords) }} />
+                    <input
+                        className="stop-wrd-chkbx"
+                        type="checkbox"
+                        defaultChecked={includeStopWords}
+                        onChange={e => { setIncludeStopWords(!includeStopWords) }}
+                    />
                     remove stop words
                 </label>
             </div>
 
             <hr />
             <div style={divColor.tokenize}>
-                <Tokenize textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+                <Tokenize
+                    textInput={textInput}
+                    setOutput={setOutput}
+                    setArray={setArray}
+                    language={language}
+                    includeStopWords={includeStopWords}
+                    setDivColor={setDivColor}
+                />
             </div>
             <hr />
             <div style={divColor.stemming} >
-                <Stemming textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+                <Stemming
+                    textInput={textInput}
+                    setOutput={setOutput}
+                    setArray={setArray}
+                    language={language}
+                    includeStopWords={includeStopWords}
+                    setDivColor={setDivColor}
+                />
             </div>
             <hr />
             <div style={divColor.lemmatizing}>
-                <Lemmatizing textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+                <Lemmatizing
+                    textInput={textInput}
+                    setOutput={setOutput}
+                    setArray={setArray}
+                    language={language}
+                    includeStopWords={includeStopWords}
+                    setDivColor={setDivColor}
+                />
             </div>
             <hr />
             <div style={divColor.postag}>
-                <PosTag textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+                <PosTag
+                    textInput={textInput}
+                    setOutput={setOutput}
+                    setArray={setArray}
+                    language={language}
+                    includeStopWords={includeStopWords}
+                    setDivColor={setDivColor}
+                />
             </div>
             <hr />
             <div style={divColor.BagOfWords}>
-                <BagOfWords textInput={textInput} setOutput={setOutput} setArray={setArray} language={language} includeStopWords={includeStopWords} setDivColor={setDivColor} />
+                <BagOfWords
+                    textInput={textInput}
+                    setOutput={setOutput}
+                    setArray={setArray}
+                    language={language}
+                    includeStopWords={includeStopWords}
+                    setDivColor={setDivColor}
+                />
             </div>
             <hr />
         </div>
