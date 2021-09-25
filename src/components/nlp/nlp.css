@@ -1,0 +1,59 @@
+
+.services-container {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 2%/5%;
+    background-color: rgb(207, 211, 214);
+}
+.service-input, .service-options, .service-output {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options-container{
+    min-width: 270px;
+    margin-left: 5px;
+}
+.services {
+    display: flex;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.stop-wrd-chkbx {
+    margin-right: 10px;
+}
+
+.radio-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.result-field-item{
+    margin-left: 20px;
+}
+.service-output-container{
+    background-color: white;
+    border: 1px solid black;
+    width: 90%;
+    margin: 20px auto;
+    height: 300px;
+    overflow: auto;
+}
+
+.options-btn {
+    background-color: rgb(24, 197, 24);
+    color: white;
+    height: 24px;
+    width: 80px;
+    margin-left: 5px;
+}
+
+.select-language {
+    margin-left: 5px;
+}
