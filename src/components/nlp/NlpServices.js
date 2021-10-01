@@ -8,7 +8,6 @@ export default function NlpServices() {
     const [output, setOutput] = useState()
     const [array, setArray] = useState(false)
 
-
     return (
         <div className="services-container">
             <h2>NLP Services</h2>
@@ -28,6 +27,5 @@ export default function NlpServices() {
                 </div>
             </div>
         </div>
-
     )
 }

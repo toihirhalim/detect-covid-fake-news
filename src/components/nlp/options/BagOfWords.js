@@ -5,9 +5,10 @@ import '../nlp.css'
 export default function BagOfWords({ textInput, setOutput, setArray, language, includeStopWords, setDivColor }) {
 
     const getBagsOfWords = async e => {
+        let text = textInput.split('"').join('\\"')
         let query = `
             query {
-                bagOfWords(text: "${textInput}",language: "${language}", stopWords: ${includeStopWords})
+                bagOfWords(text: "${text}",language: "${language}", stopWords: ${includeStopWords})
             }
         `
         setDivColor({ BagOfWords: { 'backgroundColor': 'rgb(183, 185, 187)' } })

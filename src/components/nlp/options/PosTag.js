@@ -5,9 +5,10 @@ import '../nlp.css'
 export default function PosTag({ textInput, setOutput, setArray, language, includeStopWords, setDivColor }) {
 
     const getPosTags = async e => {
+        let text = textInput.split('"').join('\\"')
         let query = `
             query {
-                posTag(text: "${textInput}",language: "${language}", stopWords: ${includeStopWords})
+                posTag(text: "${text}",language: "${language}", stopWords: ${includeStopWords})
             }
         `
         setDivColor({ postag: { 'backgroundColor': 'rgb(183, 185, 187)' } })

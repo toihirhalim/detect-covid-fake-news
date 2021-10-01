@@ -8,10 +8,10 @@ export default function Tokenize({ textInput, setOutput, setArray, language, inc
     const [tokenizeByWords, setTokenizeByWords] = useState(true)
 
     const tokenize = async e => {
-
+        let text = textInput.split('"').join('\\"')
         let query = `
             query {
-                tokenize(text: "${textInput}",language: "${language}" words: ${tokenizeByWords}, stopWords: ${includeStopWords})
+                tokenize(text: "${text}",language: "${language}" words: ${tokenizeByWords}, stopWords: ${includeStopWords})
             }
         `
         setDivColor({ tokenize: { 'backgroundColor': 'rgb(183, 185, 187)' } })

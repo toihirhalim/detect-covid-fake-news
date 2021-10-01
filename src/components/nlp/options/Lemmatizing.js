@@ -5,9 +5,10 @@ import '../nlp.css'
 export default function Lemmatizing({ textInput, setOutput, setArray, language, includeStopWords, setDivColor }) {
 
     const lemmatize = async e => {
+        let text = textInput.split('"').join('\\"')
         let query = `
             query {
-                lemmatizing(text: "${textInput}", language: "${language}", stopWords: ${includeStopWords})
+                lemmatizing(text: "${text}", language: "${language}", stopWords: ${includeStopWords})
             }
         `
         setDivColor({ lemmatizing: { 'backgroundColor': 'rgb(183, 185, 187)' } })

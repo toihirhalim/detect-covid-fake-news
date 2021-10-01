@@ -8,11 +8,10 @@ export default function SentimentAnalysis() {
     const [result, setresult] = useState()
 
     const analyse = async e => {
-
-
+        let textInput = text.split('"').join('\\"')
         let query = `
             query{
-                sentiment(text: "${text}"){
+                sentiment(text: "${textInput}"){
                 neg
                 neu
                 pos

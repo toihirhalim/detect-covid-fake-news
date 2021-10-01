@@ -13,9 +13,10 @@ export default function FakeNews() {
 
         setresult('')
 
+        let textInput = text.split('"').join('\\"')
         let query = `
             query{
-                fakeNews(text: "${text}")
+                fakeNews(text: "${textInput}")
             }
         `
 
