@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/detect-covid-fake-news/static/css/main.72bd06b6.chunk.css",
-    "main.js": "/detect-covid-fake-news/static/js/main.681a22e1.chunk.js",
-    "main.js.map": "/detect-covid-fake-news/static/js/main.681a22e1.chunk.js.map",
+    "main.js": "/detect-covid-fake-news/static/js/main.d454fe13.chunk.js",
+    "main.js.map": "/detect-covid-fake-news/static/js/main.d454fe13.chunk.js.map",
     "runtime-main.js": "/detect-covid-fake-news/static/js/runtime-main.e311ad57.js",
     "runtime-main.js.map": "/detect-covid-fake-news/static/js/runtime-main.e311ad57.js.map",
     "static/js/2.ea0aa4d5.chunk.js": "/detect-covid-fake-news/static/js/2.ea0aa4d5.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e311ad57.js",
     "static/js/2.ea0aa4d5.chunk.js",
     "static/css/main.72bd06b6.chunk.css",
-    "static/js/main.681a22e1.chunk.js"
+    "static/js/main.d454fe13.chunk.js"
   ]
 }
