@@ -1,4 +1,5 @@
 # Apprentissage Machine et Traitement de langage naturelle arabe  
+This App use a django server is this [repo](https://github.com/toihirhalim/detect-covid-fake-news-server)
 ## how to start the application  
  
 ```
