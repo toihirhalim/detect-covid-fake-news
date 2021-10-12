@@ -1,5 +1,7 @@
 # Apprentissage Machine et Traitement de langage naturelle arabe  
-This App use a django server is this [repo](https://github.com/toihirhalim/detect-covid-fake-news-server)
+This App is hosted on this [ghPage](https://toihirhalim.github.io/detect-covid-fake-news/)
+and use a django server is this [repo](https://github.com/toihirhalim/detect-covid-fake-news-server)
+which is hosted on [heroku](http://detect-covid-fake-news.herokuapp.com/)
 ## how to start the application  
  
 ```
