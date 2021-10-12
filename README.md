@@ -29,3 +29,6 @@ exemples :
 you can enter texts and have a result  laki the following :  
   
 ![scraping-img](/images/sentimentAndFakeNews.png) 
+## Licence
+
+[MIT](LICENSE)
