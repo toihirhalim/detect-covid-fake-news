@@ -1,7 +1,7 @@
 h2 {
     text-align: center;
     padding: 10px;
-  }
+}
   
 .scrapping-container {
     width: 80%;
@@ -10,17 +10,19 @@ h2 {
     padding: 10px;
     background-color: rgb(222, 226, 230);
 }
-form {
+.scraping-wraper{
+    width: 90%;
+    margin: 10px auto;
+}
+.scraping-input{
     display: flex;
-    justify-content: center;
-    margin: 10px;
+    justify-content: space-between;
 }
 #scrapp-btn {
     background-color: rgb(24, 197, 24);
     color: white;
     height: 24px;
-    width: 80px;
-    margin-left: 5px;
+    min-width: 50px;
 }
 #scrapp-btn:hover {
     background-color: rgb(24, 173, 24);
@@ -28,15 +30,22 @@ form {
 
 #input-url {
     height: 20px;
-    width: 600px;
+    flex: 1;
+    margin-right: 3px;
+    min-width: none;
+}
+
+#input-url label {
+    background-color: aqua;
+
 }
 
 .texte-container {
     background-color: white;
     border: 1px solid black;
-    width: 90%;
-    margin: 20px auto;
-    height: 400px;
+    height: 60vh;
+    width: 100%;
+    margin-top: 5px;
     overflow: auto;
 }
 

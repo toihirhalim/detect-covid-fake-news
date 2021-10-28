@@ -24,16 +24,23 @@ export default function Scraping() {
     return (
         <div className="scrapping-container">
             <h2>Scraping</h2>
-            <form onSubmit={scrapp}>
-                <div>
-                    <label>
-                        <p>enter url :</p>
-                        <input id="input-url" type="url" value={url} placeholder="https://url.domain" onChange={e => setUrl(e.target.value)} required />
-                    </label>
-                    <button id="scrapp-btn">scrap</button>
-                </div>
-            </form>
-            <Texte text={text} />
+            <div className="scraping-wraper">
+                <form onSubmit={scrapp} >
+                    <p>Enter url :</p>
+                    <div className="scraping-input">
+                        <input
+                            id="input-url"
+                            type="url"
+                            value={url}
+                            placeholder="https://url.domain"
+                            onChange={e => setUrl(e.target.value)}
+                            required
+                        />
+                        <button id="scrapp-btn">scrap</button>
+                    </div>
+                </form>
+                <Texte text={text} />
+            </div>
         </div>
     )
 }
