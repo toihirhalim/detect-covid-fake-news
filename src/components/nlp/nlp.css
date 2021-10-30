@@ -3,7 +3,7 @@
     width: 80%;
     margin: auto;
     padding: 10px;
-    border-radius: 2%/5%;
+    border-radius: 10px;
     background-color: rgb(207, 211, 214);
 }
 .service-input, .service-options, .service-output {
@@ -18,7 +18,19 @@
 }
 .services {
     display: flex;
+    flex-wrap: wrap;
 }
+
+.service-input textarea {
+    min-width: 270px;
+    height: 270px;
+}
+
+@media screen and (max-width: 721px) {
+    .service-input textarea {
+        height: 100px;
+    }
+  }
 
 .option {
     display: flex;
@@ -41,8 +53,9 @@
     background-color: white;
     border: 1px solid black;
     width: 90%;
+    min-width: 270px;
     margin: 20px auto;
-    height: 300px;
+    height: 270px;
     overflow: auto;
 }
 

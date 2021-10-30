@@ -6,7 +6,7 @@ h2 {
 .scrapping-container {
     width: 80%;
     margin: auto;
-    border-radius: 2%/4%;
+    border-radius: 10px;
     padding: 10px;
     background-color: rgb(222, 226, 230);
 }
@@ -16,6 +16,7 @@ h2 {
 }
 .scraping-input{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 #scrapp-btn {

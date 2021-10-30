@@ -1,16 +1,15 @@
 .sent-fake-container {
     width: 80%;
     margin: auto;
-    border-radius: 2%/4%;
+    border-radius: 10px;
     padding: 10px;
     background-color: rgb(172, 176, 180);
 }
 
-
 .sent-fake-components {
     display: flex;
+    flex-wrap: wrap;
 }
-
 
 .sentiment-analysis, .fake-news {
     flex: 1;
@@ -19,6 +18,13 @@
 .sentiment-analysis{
     border-right: black 1px solid;
 }
+
+@media screen and (max-width: 625px) {
+    .sentiment-analysis{
+        border-right: none;
+        border-bottom: black 1px solid;
+    }
+  }
 
 h3{
     text-align: center;

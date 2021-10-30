@@ -15,7 +15,7 @@ export default function NlpServices() {
                 <div className="service-input">
                     <div>
                         <p>enter text :</p>
-                        <textarea value={textInput} cols="40" rows="20" onChange={e => setTextInput(e.target.value)} />
+                        <textarea value={textInput} onChange={e => setTextInput(e.target.value)} />
                     </div>
 
                 </div>
