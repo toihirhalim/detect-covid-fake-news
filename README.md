@@ -1,34 +1,12 @@
 # Apprentissage Machine et Traitement de langage naturelle arabe  
+This App is hosted on this [ghPage](https://toihirhalim.github.io/detect-covid-fake-news/)
+and use a django server is this [repo](https://github.com/toihirhalim/detect-covid-fake-news-server)
+which is hosted on [heroku](http://detect-covid-fake-news.herokuapp.com/)
 ## how to start the application  
-start the server with strawberry 
+ 
 ```
-$ cd server
-$ strawberry server App
-```
-start the web client with react
-
-```
-$ cd client
-$ npm start
-```
-
-## install dependencies and packages  
-in the server 
-```
-$ cd server
-$ pip install strawberry-graphql  
-$ pip install uvicorn  
-$ pip install beautifulsoup4  
-$ pip install requests  
-$ pip install nltk
-$ pip install pandas  
-$ pip install sklearn  
-```
-
-in the web client  
-```
-$ cd client
-$ npm install
+ npm install
+ npm start
 ```
   
 ## Use  
@@ -39,9 +17,7 @@ this application has one page with three section :
   
 ### Scrapping  
  enter a url and click the scrapp button  
-some exemples :  
-![scraping-img](/images/arabicScraping.png)
-   
+some exemples :     
 ![scraping-img](/images/englishScrapping.png)  
   
 ### NLP 
@@ -49,11 +25,12 @@ you can enter a test arabic or english and use the differents services like : to
  
 exemples :  
   
-![scraping-img](/images/arabicSteming.png)  
-  
 ![scraping-img](/images/englishSteming.png)  
   
 ### Sentiment analysis & Fakeews Detect about Covid-19  
 you can enter texts and have a result  laki the following :  
   
 ![scraping-img](/images/sentimentAndFakeNews.png) 
+## Licence
+
+[MIT](LICENSE)
