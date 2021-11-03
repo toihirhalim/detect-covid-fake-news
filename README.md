@@ -1,4 +1,5 @@
-# Apprentissage Machine et Traitement de langage naturelle arabe  
+# Apprentissage Machine et Traitement de langage naturelle
+Traitement de language naturelle telle que: analyse des sentiments et detecter les faux informations a propos du covid-19.  
 This App is hosted on this [ghPage](https://toihirhalim.github.io/detect-covid-fake-news/)
 and use a django server is this [repo](https://github.com/toihirhalim/detect-covid-fake-news-server)
 which is hosted on [heroku](https://detect-covid-fake-news.herokuapp.com/)
