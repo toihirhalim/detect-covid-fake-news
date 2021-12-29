@@ -6,14 +6,14 @@ import SentimentFakeContainer from './components/otherservices/SentimentFakeCont
 function App() {
   return (
     <div className="App">
+      <section className="sent-fake">
+        <SentimentFakeContainer />
+      </section>
       <section className="scrapping">
         <Scraping />
       </section>
       <section className="nlp">
         <NlpServices />
-      </section>
-      <section className="sent-fake">
-        <SentimentFakeContainer />
       </section>
     </div>
   );
